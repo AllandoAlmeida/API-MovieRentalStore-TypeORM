@@ -16,6 +16,5 @@ export const checkExistingId = async (
   if (!existingId) throw new AppError("Movie not found", 404);
 
   response.locals = { ...response.locals, existingId };
-
   return next();
 };

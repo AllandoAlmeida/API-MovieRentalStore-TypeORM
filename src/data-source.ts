@@ -11,14 +11,14 @@ export const dataSourceConfig = (): DataSourceOptions => {
 
     const nodeEnv: string | undefined = process.env.NODE_ENV;
 
-    if(nodeEnv === "test") {
-        return{
-            type:"sqlite",
-            database: "memory",
-            synchronize: true,
-            entities: [entitiesPath],
+    if (nodeEnv === "test") {
+        return {
+          type: "sqlite",
+          database: ":memory:",
+          synchronize: true,
+          entities: [entitiesPath],
         };
-    }
+      }
 
     if (!dbUrl) {
         throw new Error("Missing env var: 'DATABASE_URL' ")
