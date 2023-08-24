@@ -1,7 +1,7 @@
-import { NextFunction, Request, Response } from "express";
-
+import { Request, Response, NextFunction } from "express";
 import { movieRepository } from "../repositories";
 import { AppError } from "../errors/AppError.errors";
+
 export const checkExistingName = async (
   request: Request,
   response: Response,
@@ -10,12 +10,14 @@ export const checkExistingName = async (
   const { name } = request.body;
 
   const movie = await movieRepository.findOneBy({
-    name: name,
-  });
+    name: name
+})
 
-  if (movie?.name) {
-    throw new AppError("Movie already exists.", 409);
-  }
+if (!name) return next()
 
-  return next();
-};
+if (movie) {
+    throw new AppError( "Movie already exists.", 409)
+}
+
+return next()
+}

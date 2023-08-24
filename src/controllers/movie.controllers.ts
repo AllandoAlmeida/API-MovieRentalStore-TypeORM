@@ -28,22 +28,13 @@ export const searchAllMovies = async (
   return response.status(200).json(movies);
 };
 
-/* export const upDateMovie = async (
-  request: Request,
-  response: Response
-): Promise<Response> => {
-  const { existingId } = response.locals;
-  const updatedMovie: Movie = await updateMovieById(existingId, request.body);
-  return response.status(200).json(updatedMovie);
-}; */
-
 export const upDateMovie = async (
   request: Request,
   response: Response
 ): Promise<Response> => {
   const { existingId } = response.locals;
   const { body } = request;
-  console.log(body)
+
   const movie: Movie = await updateMovieById(existingId, body);
   return response.status(200).json(movie);
 };
