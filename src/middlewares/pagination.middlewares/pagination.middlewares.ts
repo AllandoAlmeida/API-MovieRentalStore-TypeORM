@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { PaginationParams } from '../interfaces/pagination.interfaces';
+import { PaginationParams } from '../../interfaces/pagination.interfaces/pagination.interfaces'; 
 
 export const pagination = (
   request: Request,

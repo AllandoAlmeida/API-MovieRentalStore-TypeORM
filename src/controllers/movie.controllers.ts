@@ -6,8 +6,8 @@ import {
   listMovies,
   updateMovieById,
 } from "../services/movie.services";
-import { MovieSearch, MovieUpDate } from "../interfaces/movie.interfaces";
-import { Pagination } from "../interfaces/pagination.interfaces";
+import { MovieSearch, MovieUpDate } from "../interfaces/movie.interfaces/movie.interfaces";
+import { Pagination } from "../interfaces/pagination.interfaces/pagination.interfaces"; 
 
 export const createMovie = async (
   request: Request,

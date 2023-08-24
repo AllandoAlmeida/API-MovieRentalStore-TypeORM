@@ -5,14 +5,14 @@ import {
   searchAllMovies,
   upDateMovie,
 } from "../controllers/movie.controllers";
-import { checkValidBody } from "../middlewares/checkValidBody.middlewares";
-import { checkExistingName } from "../middlewares/checkExistingName.middlewares";
+import { checkValidBody } from "../middlewares/allChecks.middlewares/checkValidBody.middlewares";
+import { checkExistingName } from "../middlewares/allChecks.middlewares/checkExistingName.middlewares";
 import {
   moviesCreateSchema,
   moviesUpDateSchema,
 } from "../schemas/movie.schema";
-import { checkExistingId } from "../middlewares/checkExistingId.middlewares";
-import { pagination } from "../middlewares/pagination.middlewares";
+import { checkExistingId } from "../middlewares/allChecks.middlewares/checkExistingId.middlewares";
+import { pagination } from "../middlewares/pagination.middlewares/pagination.middlewares";
 
 export const movieRouter: Router = Router();
 

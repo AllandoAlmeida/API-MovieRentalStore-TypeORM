@@ -1,7 +1,7 @@
 import { DeepPartial, Repository } from "typeorm";
 import { z } from "zod";
-import { moviesSchema } from "../schemas/movie.schema";
-import Movie from "../entities/movies.entity";
+import { Movie } from "../../entities";
+import { moviesSchema } from "../../schemas/movie.schema";
 
 export type MovieCreate = z.infer<typeof moviesSchema>;
 export type MovieSearch = Array<Movie>;

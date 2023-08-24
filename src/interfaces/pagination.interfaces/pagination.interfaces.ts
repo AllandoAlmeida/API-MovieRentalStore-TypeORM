@@ -1,4 +1,5 @@
-import { MovieSearch } from './movie.interfaces';
+import { MovieSearch } from "../movie.interfaces/movie.interfaces";
+
 
 
 type Pagination = {

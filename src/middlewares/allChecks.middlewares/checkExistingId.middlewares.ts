@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 
-import { movieRepository } from "../repositories";
-import { AppError } from "../errors/AppError.errors";
-import { Movie } from "../entities";
+import { movieRepository } from "../../repositories/repositories";
+import { AppError } from "../../errors/AppError.errors";
+import { Movie } from "../../entities";
 
 export const checkExistingId = async (
   request: Request,

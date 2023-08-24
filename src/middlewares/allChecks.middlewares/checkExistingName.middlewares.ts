@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import { movieRepository } from "../repositories";
-import { AppError } from "../errors/AppError.errors";
+import { movieRepository } from "../../repositories/repositories";
+import { AppError } from "../../errors/AppError.errors";
 
 export const checkExistingName = async (
   request: Request,

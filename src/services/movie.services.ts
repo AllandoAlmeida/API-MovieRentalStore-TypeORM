@@ -1,10 +1,7 @@
 import { Movie } from "../entities";
-import { MovieCreate, MovieUpDate } from "../interfaces/movie.interfaces";
-import {
-  Pagination,
-  PaginationParams,
-} from "../interfaces/pagination.interfaces";
-import { movieRepository } from "../repositories";
+import { MovieCreate, MovieUpDate } from "../interfaces/movie.interfaces/movie.interfaces";
+import { PaginationParams, Pagination } from "../interfaces/pagination.interfaces/pagination.interfaces";
+import { movieRepository } from "../repositories/repositories";
 
 export const addNewMovies = async (movieBody: MovieCreate): Promise<Movie> => {
   const newMovie: Movie = await movieRepository.save(movieBody);
